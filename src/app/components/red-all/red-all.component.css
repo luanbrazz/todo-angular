@@ -3,13 +3,31 @@
     margin: auto;
 }
 
+.badge{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.badge button{
+    margin-top: 1.5rem;
+    width: 50%;
+}
+
+.light-blue{
+    background-color: #B0D7EF;
+}
+
 .blue{
     background:#0773D1;
 }
 
-.new-todo{
-    width: 100%;
-    margin-top: center;
+.new-todo {
+    width: 50%;
+    margin-top:initial;
+    background:#0773D1;
+    margin-top:.5rem;
 }
 
 mat-card{

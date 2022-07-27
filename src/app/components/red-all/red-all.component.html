@@ -1,13 +1,16 @@
 
 <div class="container">
-    <button class="new-todo mat-elevation-z8" mat-flat-button color="primary" class="blue">NEW TODO</button>
+    <div class="badge">
+        <button class="light-blue" mat-flat-button color="primary" matBadge="{{ closed }}" matBadgeColor="warn">Finished tasks</button>
+    </div>
+    <button class="new-todo mat-elevation-z8" mat-flat-button color="primary">NEW TODO</button>
 
     <div class="content" *ngFor="let item of list">
         <mat-card class="mat-elevation-z8">
             <p>Date to finish: {{item.dataParaFinalizar}}</p>
             <mat-card-header>
               <mat-card-title>{{item.titulo}}</mat-card-title>
-              <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+              <mat-card-subtitle>{{item.descricao}}</mat-card-subtitle>
             </mat-card-header>
 
             <div class="actions">
