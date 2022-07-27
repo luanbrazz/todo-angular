@@ -1,17 +1,18 @@
-img{
+img {
     height: 3rem;
 }
 
-.header{
+.header {
     justify-content: center;
     height: 10%;
 }
 
-span{
+span {
     display: flex;
     align-items: center;
 }
 
-h1{
+h1 {
     padding-left: 1.2rem;
+    
 }
