@@ -2,6 +2,7 @@ import { Router } from '@angular/router';
 import { TodoService } from './../../services/todo.service';
 import { Component, OnInit } from '@angular/core';
 import { Todo } from 'src/app/models/todo';
+import { isNgTemplate } from '@angular/compiler';
 
 @Component({
   selector: 'app-red-all',
@@ -34,6 +35,16 @@ export class RedAllComponent implements OnInit {
       this.closed = this.listFinished.length;
     });
   }
+
+  finalizar(item: Todo): void{
+    item.finalizado = true;
+    this.service.update(item).subscribe(() => {
+      this.service.message('Task completed successfully!');
+      this.list = this.list.filter(todo => todo.id !== item.id);
+      this.closed++
+    })
+  }
+
   delete(id: any):void {
     this.service.delete(id).subscribe((resposta) => {
       if(resposta === null){
