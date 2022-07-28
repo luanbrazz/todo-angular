@@ -7,6 +7,13 @@
     width: 100%;
 }
 
+h1{
+    text-align: center;
+    font-weight: 600;
+    margin-top: 1rem;
+    color:#519DCF;
+}
+
 
 .blue{
     color: #0773D1;

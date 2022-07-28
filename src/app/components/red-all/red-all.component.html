@@ -1,7 +1,6 @@
-
 <div class="container">
     <div class="badge">
-        <button class="light-blue" mat-flat-button color="primary" matBadge="{{ closed }}" matBadgeColor="warn">Finished tasks</button>
+        <button (click)="navegarParaFinalizadas()" class="light-blue" mat-flat-button color="primary" matBadge="{{ closed }}" matBadgeColor="warn">Finished tasks</button>
     </div>
     <button class="new-todo mat-elevation-z8" mat-flat-button color="primary">NEW TODO</button>
 
