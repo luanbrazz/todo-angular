@@ -33,5 +33,12 @@ export class RedAllComponent implements OnInit {
       this.closed = this.listFinished.length;
     });
   }
-
+  delete(id: any):void {
+    this.service.delete(id).subscribe((resposta) => {
+      if(resposta === null){
+        this.service.message('Task successfully deleted!');
+        this.list = this.list.filter(todo => todo.id !== id);
+      }
+    })
+  }
 }
