@@ -2,7 +2,7 @@
     <div class="badge">
         <button (click)="navegarParaFinalizadas()" class="light-blue" mat-flat-button color="primary" matBadge="{{ closed }}" matBadgeColor="warn">Finished tasks</button>
     </div>
-    <button class="new-todo mat-elevation-z8" mat-flat-button color="primary">NEW TODO</button>
+    <button routerLink="create"class="new-todo mat-elevation-z8" mat-flat-button color="primary">NEW TODO</button>
 
     <div class="content" *ngFor="let item of list">
         <mat-card class="mat-elevation-z8">

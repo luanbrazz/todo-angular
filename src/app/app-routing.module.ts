@@ -1,3 +1,4 @@
+import { CreateComponent } from './components/create/create.component';
 import { FinalizadosComponent } from './components/finalizados/finalizados.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -11,7 +12,12 @@ const routes: Routes = [
   {
     path: 'finalizados', 
     component: FinalizadosComponent
+  },
+  {
+    path: 'create', 
+    component: CreateComponent
   }
+
 ];
 
 @NgModule({
